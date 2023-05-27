@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Kalkulator Procentowy % Obliczanie Procentów - Najszybszy!</title>
+		<meta
+			name="description"
+			content="Kalkulator Procentowy ułatwia Obliczanie Procentów. Procent z liczby. Jakim procentem jednej liczby jest druga? O ile procent liczba wzrosła lub zmalała? Dodaj lub odejmij procent do lub od liczby. Percentage Calculator."
+		/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="stylesheet" href="stylestestv1.css" />
+		<meta property="og:title" content="Kalkulator Procentowy Online !" />
+		<meta property="og:url" content="https://kalkulatorprocentowy.pl/" />
+		<meta property="og:image" content="https://kalkulatorprocentowy.pl/procentshare.png" />
+		<meta property="og:description" content="Procent z liczby. Jakim procentem jednej liczby jest druga? O ile procent liczba wzrosła lub zmalała? Dodaj lub odejmij procent do od liczby." />
+		<meta property="og:site_name" content="Kalkulator Procentowy Online" />
+		<script>
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				(i[r] =
+					i[r] ||
+					function () {
+						(i[r].q = i[r].q || []).push(arguments);
+					}),
+					(i[r].l = 1 * new Date());
+				(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m);
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+			ga('create', 'UA-57902905-13', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+			<a href="index.html" class="active">kalkulatorprocentowy.pl</a>
+			<a href="kalkulator-vat-brutto-netto.html">Kalkulator VAT Brutto Netto</a>
+			<a href="kalkulator.html">Zwykły Kalkulator</a>
+			<a href="procent-skladany.html">Procent Składany</a>
+			<a href="kontakt.html">Kontakt</a>
+			<a href="obliczanie-procentow.html">Obliczanie Procentów</a>
+			<a href="javascript:void(0);" style="font-size: 15px" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+
+		<article class="block prose" id="maxwidth">
+			<h1>Kalkulator Procentowy - Obliczanie Procentów</h1>
+			<br /><br /><mark>Jak chcesz to możesz dodać te stronę do <b>zakładek</b>, aby mieć do niej szybki dostep.</mark>
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle" data-ad-client="ca-pub-4035590200400917" data-ad-slot="2383803584" id="kost"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			<ins class="adsbygoogle" data-ad-client="ca-pub-4035590200400917" data-ad-slot="2383803584" id="kost2"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			<ins class="adsbygoogle" data-ad-client="ca-pub-4035590200400917" data-ad-slot="2383803584" id="kost3"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			<form name="form1" method="post" id="form1">
+				<fieldset>
+					<legend>Obliczanie procentu z danej liczby</legend>
+					<div>
+						<input type="number" pattern="[0-9]*" inputmode="decimal" name="a" placeholder="1" oninput="perc1()" />% z
+						<input type="number" pattern="[0-9]*" inputmode="decimal" name="b" placeholder="100" oninput="perc1()" /> =
+						<input maxlength="40" size="7" placeholder="1" name="total1" id="kopiujwynik" />
+						<div style="float: right">
+							<input onclick="reset1()" type="button" value="reset" class="resetr" />
+							<input onclick="newElement(1)" type="button" value="H" class="resetg" title="HISTORIA" />
+							<input onclick="mykwfunction(1)" type="button" value="KW" class="resetkwkr" title="KOPIUJ WYNIK" />
+							<input onclick="mykrfunction(1)" type="button" value="KR" class="resetkwkr" title="KOPIUJ RÓWNANIE" />
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<form name="form2" method="post" id="form2">
+				<fieldset>
+					<legend class="legend2">Jakim procentem jednej liczby jest druga</legend>
+					<div>
+						<input type="number" pattern="[0-9]*" inputmode="decimal" name="c" placeholder="1" oninput="perc2()" /> dla
+						<input type="number" pattern="[0-9]*" inputmode="decimal" name="d" placeholder="100" oninput="perc2()" /> = <input size="7" placeholder="1" name="total2" />%&nbsp;
+						<div style="float: right">
+							<input onclick="reset2()" type="button" value="reset" class="resetr" />
+							<input onclick="newElement(2)" type="button" value="H" class="resetg" title="HISTORIA" />
+							<input onclick="mykwfunction(2)" type="button" value="KW" class="resetkwkr" title="KOPIUJ WYNIK" />
+							<input onclick="mykrfunction(2)" type="button" value="KR" class="resetkwkr" title="KOPIUJ RÓWNANIE" />
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<form name="form4" method="post" id="form4">
+				<fieldset>
+					<legend>Dodaj procent do liczby</legend>
+					<div>
+						<input type="number" pattern="[0-9]*" inputmode="decimal" name="g" placeholder="1" oninput="perc4()" /><span class="red"> + </span
+						><input type="number" pattern="[0-9]*" inputmode="decimal" name="h" placeholder="100" oninput="perc4()" />% = <input size="7" placeholder="2" name="total4" />
+						<div style="float: right">
+							<input onclick="reset4()" type="button" value="reset" class="resetr" />
+							<input onclick="newElement(3)" type="button" value="H" class="resetg" title="HISTORIA" />
+							<input onclick="mykwfunction(4)" type="button" value="KW" class="resetkwkr" title="KOPIUJ WYNIK" />
+							<input onclick="mykrfunction(3)" type="button" value="KR" class="resetkwkr" title="KOPIUJ RÓWNANIE" />
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<form name="form5" method="post" id="form5">
+				<fieldset>
+					<legend>Odejmij procent od liczby</legend>
+					<div>
+						<input type="number" pattern="[0-9]*" inputmode="decimal" name="i" placeholder="1" oninput="perc5()" /><span class="blue"> − </span
+						><input type="number" pattern="[0-9]*" inputmode="decimal" name="j" placeholder="100" oninput="perc5()" />% = <input size="7" placeholder="0" name="total5" />
+						<div style="float: right">
+							<input onclick="reset5()" type="button" value="reset" class="resetr" />
+							<input onclick="newElement(4)" type="button" value="H" class="resetg" title="HISTORIA" />
+							<input onclick="mykwfunction(5)" type="button" value="KW" class="resetkwkr" title="KOPIUJ WYNIK" />
+							<input onclick="mykrfunction(4)" type="button" value="KR" class="resetkwkr" title="KOPIUJ RÓWNANIE" />
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<form name="form3" method="post" id="form3">
+				<fieldset>
+					<legend class="legend3">O ile procent jedna liczba wzrosła/zmalała w stosunku do drugiej</legend>
+					<div>
+						<input type="number" pattern="[0-9]*" inputmode="decimal" name="e" placeholder="1" oninput="perc3()" /> do
+						<input type="number" pattern="[0-9]*" inputmode="decimal" name="f" placeholder="100" oninput="perc3()" /> wzrosło/zmalało o
+						<input size="7" placeholder="9900" name="total3" />%&nbsp;
+						<div style="float: right">
+							<input onclick="reset3()" type="button" value="reset" class="resetr" />
+							<input onclick="newElement(5)" type="button" value="H" class="resetg" title="HISTORIA" />
+							<input onclick="mykwfunction(3)" type="button" value="KW" class="resetkwkr" title="KOPIUJ WYNIK" />
+							<input onclick="mykrfunction(5)" type="button" value="KR" class="resetkwkr" title="KOPIUJ RÓWNANIE" />
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<br /><span class="licznik">1.8k udostępnień </span>
+			<div class="dropdown">
+				<button class="dropbtn">udostępnij</button>
+				<div class="dropdown-content">
+					<a
+						href="http://www.wykop.pl/dodaj/link/?url=https://kalkulatorprocentowy.pl&title=Kalkulator Procentowy&desc=Kalkulator Procentowy ułatwia Obliczanie Procentów. Procent z liczby. Jakim procentem jednej liczby jest druga? O ile procent liczba wzrosła lub zmalała?"
+						>Wykop</a
+					>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https://kalkulatorprocentowy.pl">Facebook</a>
+					<a href="fb-messenger://share/?link=https://kalkulatorprocentowy.pl">Messenger</a>
+					<a href="whatsapp://send?text=https://kalkulatorprocentowy.pl/">Whatsapp</a>
+					<a href="http://reddit.com/submit?url=https%3A%2F%2Fkalkulatorprocentowy.pl&title=Kalkulator%20Procentowy">Reddit</a>
+					<a href="https://twitter.com/home?status=https://kalkulatorprocentowy.pl ">Twitter</a>
+					<a href="mailto:info@example.com?&subject=&body=https://kalkulatorprocentowy.pl ">Email</a>
+					<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://kalkulatorprocentowy.pl&title=&summary=&source=">Linkedin</a>
+					<a href="https://pinterest.com/pin/create/button/?url=https://kalkulatorprocentowy.pl&media=&description=">Pinterest</a>
+					<a href="https://getpocket.com/save?url=https://kalkulatorprocentowy.pl/">Pocket</a>
+				</div>
+			</div>
+			<div class="tooltip" id="btnright">
+				<button onclick="mycopyfunction()" onmouseout="outFunc()" class="btnkopiuj"><span class="tooltiptext" id="myTooltip">Kopiuj</span>kopiuj link</button>
+			</div>
+			<input type="text" value="https://kalkulatorprocentowy.pl" onclick="this.focus();this.select()" id="mykopiuInput" class="okno" /><br /><br />
+			<a href="https://addons.mozilla.org/pl/firefox/addon/kalkulatorprocentowy/" target="_blank"
+				><button class="btnkopiuj"><img width="26" height="26" src="firefox.png" alt="Mozilla Firefox logo" /></button
+			></a>
+			<a href="https://chrome.google.com/webstore/detail/kalkulatorprocentowypl/akgloigleamifmhimlijjbnenophobcp?hl=pl" target="_blank"
+				><button class="btnkopiuj">
+					<img width="26" height="26" src="chrome.svg" alt="Google Chrome logo" /><img width="26" height="26" src="edge.svg" alt="Microsoft Edge logo" /><img
+						width="26"
+						height="26"
+						src="opera.png"
+						alt="Opera logo"
+					/>
+					Zainstaluj wtyczke w przeglądarce
+				</button></a
+			>
+			<button onclick="mywstawFunction()" class="btnkopiuj" id="wstaw">widżet kalkulator na strone</button>
+			<div id="myDIV">
+				Pierwszy kalkulator kopiuj kod<br /><textarea onclick="this.focus();this.select()" class="okno2">
+<embed src="https://kalkulatorprocentowy.pl/wstaw/1.html" width="379.38px" height="80.64px"></textarea
+				><br />
+				Drugi kalkulator kopiuj kod<br /><textarea onclick="this.focus();this.select()" class="okno2">
+<embed src="https://kalkulatorprocentowy.pl/wstaw/2.html" width="399.38px" height="80.64px"></textarea
+				><br />
+				Trzeci kalkulator kopiuj kod<br /><textarea onclick="this.focus();this.select()" class="okno2">
+<embed src="https://kalkulatorprocentowy.pl/wstaw/3.html" width="389.38px" height="80.64px"></textarea
+				><br />
+				Czwarty kalkulator kopiuj kod<br /><textarea onclick="this.focus();this.select()" class="okno2">
+<embed src="https://kalkulatorprocentowy.pl/wstaw/4.html" width="389.38px" height="80.64px"></textarea
+				><br />
+				Piąty kalkulator kopiuj kod<br /><textarea onclick="this.focus();this.select()" class="okno2">
+<embed src="https://kalkulatorprocentowy.pl/wstaw/5.html" width="549.38px" height="80.64px"></textarea
+				>
+			</div>
+			<br /><br />
+
+			<div id="hDIV" class="header">
+				<span class="histo">Historia</span><br /><br />
+				<span onclick="newElement(1)" class="addBtn">Zapisz 1</span>
+				<span onclick="newElement(2)" class="addBtn">Zapisz 2</span>
+				<span onclick="newElement(3)" class="addBtn">Zapisz 3</span>
+				<span onclick="newElement(4)" class="addBtn">Zapisz 4</span>
+				<span onclick="newElement(5)" class="addBtn">Zapisz 5</span>
+			</div>
+
+			<ul id="myUL">
+				<li>10% z 100 = 10 (Przykład zapisanego wyniku)</li>
+				<li class="checked">15 dla 100 = 15% (Przykład zakreślonego ale nie usuniętego wyniku, wystarczy kliknąć na pasek z działaniem)</li>
+			</ul>
+
+			<br /><br /><br /><br />
+		</article>
+		<article>
+			<h2>Jak pomijając kalkulator procentowy obliczyć procent z "a" ?</h2>
+			<br /><br />
+			<p>Przykładowo jeżeli pragniemy dowiedzieć się, ile wynosi 15% z liczby 1235, powinniśmy wykonać następujące działanie zgodnie ze wzorem:</p>
+			<p><img src="kalkulator-procentowy-wzor1.png" width="100" height="70" alt="kalkulator procentowy-wzór1" /></p>
+			<p>gdzie:</p>
+			<p>x- procent, w naszym przypadku 15%</p>
+			<p>a- liczba, na której wykonujemy obliczenie, w naszym przypadku to 1235</p>
+			<p>Tym samym 15% z liczby 1235 wynosi: (15/100)*1235=185,25</p>
+			<h2>Jak wyjąwszy kalkulator procentowy obliczyć jakim procentem "b" jest "a" ?</h2>
+			<br /><br />
+			<p>Przykładowo jeżeli chcemy dowiedzieć się, jakim procentem liczby "b" jest liczba "a", należy wykonać następujące działanie:</p>
+			<p><img src="kalkulator-procentowy-wzor2.png" width="99" height="69" alt="kalkulator procentowy-wzór2" /></p>
+			<p>gdzie:</p>
+			<p>a- liczba, która stanowi % liczby b</p>
+			<p>b- pierwsza liczba</p>
+			<h2>Jak pomijając kalkulator procentowy wyliczyć o ile procent "a" wzrosło/zmalało w stosunku do "b" ?</h2>
+			<br /><br />
+			<p>Bardzo przydatny w tym przypadku będzie następujący wzór:</p>
+			<p><img src="kalkulator-procentowy-wzor3.png" width="188" height="80" alt="kalkulator procentowy-wzór3" /></p>
+			<p>gdzie:</p>
+			<p>a- przykładowo wyższa cena zakupu</p>
+			<p>b- niższa cena zakupu</p>
+			<h2>Jak wyjąwszy kalkulator procentowy dodać procent do "a" ?</h2>
+			<br /><br />
+			<p>Aby wykonać to działanie, potrzebny jest nam następujący wzór:</p>
+			<p><img src="kalkulator-procentowy-wzor4.png" width="188" height="80" alt="kalkulator procentowy-wzór4" /></p>
+			<p>gdzie:</p>
+			<p>a- przykładowo początkowa suma lokaty</p>
+			<p>b- oprocentowanie</p>
+			<h2>Jak pomijając kalkulator procentowy odjąć procent od "a" ?</h2>
+			<br /><br />
+			<p>Aby odjąć % od danej liczby, wystarczy posłużyć się poniższym wzorem:</p>
+			<p><img src="kalkulator-procentowy-wzor5.png" width="190" height="80" alt="kalkulator procentowy-wzór5" /></p>
+			<p>gdzie:</p>
+			<p>a- wartość liczbowa</p>
+			<p>b- wartość wyrażona w procentach</p>
+			<a href="https://www.facebook.com/kalkulatorprocentowy/">Wrzuć LIKE na Facebooku</a>
+			<a href="https://pl.wikipedia.org/wiki/Procent">Definicja procenta</a>
+		</article>
+		<article>
+			<br /><br /><span class="rozwiniecie">Rozwinięcie</span><br /><br />
+			<h2>Obliczanie procentów z danej liczby</h2>
+			<br />
+			<b>Aby obliczyć procent danej liczby,</b> należy procent przedstawić w postaci ułamka i otrzymany ułamek pomnożyć przez daną liczbę. <br /><br /><img
+				src="kalkulator-procentowy-wzor1.png"
+				alt="Obliczanie procentu z danej liczby (x/100*a) - Kalkulator procentowy Obliczanie procentów Kalkulator %"
+			/><br /><br />
+			Działanie takie wysoce przydatne jest w przypadku obliczania wszelkiego rodzaju stóp procentowych oraz oprocentowania z jakim spotykamy się w banku. Dla przykładu, jeżeli chcemy określić,
+			jak duży podatek zapłacimy od uzyskanego w danym miesiącu obrotu, a dodatkowo zdobyliśmy informację, iż aktualne oprocentowanie wynosi 18%, wystarczy podstawić do wzoru zarówno rzeczoną
+			wartość jak i sumę zarobionych przez okres jednego miesiąca pieniędzy.<br /><br />
+			I tak:<br /><br />
+			Przyjmując, że udało nam się zgromadzić 5000 złotych, w pierwszym polu <strong>kalkulatora procentowego</strong> wprowadzamy aktualne oprocentowanie (18 %), natomiast w polu drugim
+			wpisujemy uzyskane zarobki. Dzięki dostępnemu programowi w bezproblemowy sposób określimy, iż 18 % z 5000 to 900. Wynik określa wysokość podatku, jaką należy zapłacić za prowadzoną
+			działalność w Urzędzie Skarbowym. <br /><br />
+			<h2>Jakim procentem jednej liczby jest druga liczba</h2>
+			<br />
+			<b>Aby obliczyć jakim procentem liczby "b" jest liczba "a",</b> wystarczy podzielić "a" przez "b", a następnie otrzymany ułamek zamienić na procenty.<br /><br /><img
+				src="kalkulator-procentowy-wzor2.png"
+				alt="Jakim procentem jednej liczby jest druga liczba (a/b*100) - Kalkulator procentowy Obliczanie procentów Kalkulator %"
+			/><br /><br />
+			Kolejna z dostępnych w ramach <strong>kalkulatora %</strong> funkcji umożliwia dokładne obliczenie jakim procentem jednej liczby jest druga liczba. W tym przypadku wzór zastosowany zostać
+			może do określania wielokrotności określonych wartości. Ma on przede wszystkim zastosowanie w przypadku handlu oraz dokonywania zestawień statystycznych. Aby lepiej zrozumieć działanie
+			przedstawionego powyżej wzoru w praktyce, posłużmy się prostym przykładem.<br /><br />
+			Załóżmy, że prowadzimy firmę handlowo-usługową, której głównym profilem działalności jest sprzedaż sprzętu elektronicznego. Chcąc określić jak poprawiła…lub pogorszyła się prowadzona
+			sprzedaż, zestawmy ilość sprzedanych komputerów z ich liczbą zakupioną w miesiącu poprzednim.<br /><br />
+			I tak:<br /><br />
+			Obecny miesiąc był dla nas niezwykle korzystny, jako że udało nam się zbyć aż 182 komputery. W miesiącu poprzednim wartość ta wynosiła 83. Wpisując wymienione powyżej liczby w kolejne pola
+			naszego kalkulatora dowiemy się, że 182 to 219.27 % liczby 83 – o tyle więcej sprzętu elektronicznego udało nam się sprzedać klientom!
+			<br /><br />
+			<h2>O ile procent liczba "a" wzrosła/zmalała w stosunku do liczby "b"</h2>
+			<br />
+			<b>Aby obliczyć o ile procent liczba "a" wzrosła lub zmalała w stosunku do liczby "b",</b> należy wykonać następujące działanie. <br /><br /><img
+				src="kalkulator-procentowy-wzor3.png"
+				alt="O ile procent liczba 'a' wzrosła/zmalała w stosunku do liczby 'b' ({[b-a]/a}*100) - Kalkulator procentowy Obliczanie procentów Kalkulator %"
+			/><br /><br />
+			Niniejszym wzorem również posłużyć się możemy określając nasze przychody, wydatki oraz analizując, jak korzystne jest dla nas prowadzenie działalności, handel walutami, czy też – gra na
+			giełdzie. Aby lepiej przybliżyć naszym użytkownikom zamysł niniejszego wzoru, posłużymy się prostym przykładem:<br /><br />
+			Przyjmijmy, iż gramy na giełdzie. Znajomy polecił nam aukcje popularnego przedsiębiorstwa paliwowego, które pierwszego dnia miesiąca miały wartość 100 złotych za aukcję. Licząc na szybki
+			zysk zakupiliśmy ich dziesięć, płacąc tym samym 1000 złotych. Po kilku dniach przedsiębiorstwo ujawniło dane o oszustwach finansowych, w jakie zamieszany był prezes firmy. Na wieść o tym
+			fakcie cena aukcji spadła do poziomu 60 złotych za sztukę, a więc – 600 złotych za 10 aukcji. Jak dowiedzieć się, jaką sumę pieniędzy stracimy na swojej transakcji zbywając aukcje w danym
+			momencie?<br /><br />
+			W naszym <strong>kalkulatorze procentowym</strong> wpisujemy w pierwszym polu liczbę 1000 (cena zakupu), natomiast w drugim – 600 (obecna cena dziesięciu aukcji). Wynik jaki otrzymamy to
+			-40, co oznacza, że wartość aukcji spadła o 40 procent. <br /><br />
+			<h2>Dodaj procent do liczby</h2>
+			<br />
+			<b>Aby dodać procent do liczby,</b> należy wykonać następujące działanie. <br /><br /><img
+				src="kalkulator-procentowy-wzor4.png"
+				alt="Dodaj procent do liczby (a+{[b/100]*a}) - Kalkulator procentowy Obliczanie procentów Kalkulator %"
+			/><br /><br />
+			Niniejsza funkcja naszego kalkulatora na pewno zainteresuje wszelkich właścicieli kont bankowych, którzy chcieliby określić, jak dużo mogą zyskać na określonym typie lokaty, do której
+			założenia zachęcają przedstawiciele placówki. Jeżeli mają Państwo możliwość zabrania szkicu umowy do domu, zalecamy przeprowadzenie szacunków z wykorzystaniem niniejszego równania.<br /><br />
+			Przykładowo:<br /><br />
+			Załóżmy, iż mają Państwo 1000 złotych, które pragną Państwo wpłacić na lokatę krótkoterminową. Obowiązuje ona przez 1 rok, natomiast Państwo jesteście w stanie zarobić na niej (po odjęciu
+			wszelkich kosztów manipulacyjnych i opłat) 3 % wpłaconej wartości.<br /><br />
+			W takim przypadku obliczenie wartości jaką otrzymamy po upływie 12 miesięcy nie jest zadaniem trudnym. Wystarczy bowiem w pierwsze z pól naszego kalkulatora wpisać wartość 1000 (suma
+			początkowa składana na lokacie), natomiast w drugim określić podane przez bank oprocentowanie, a więc 3 %. Otrzymany wynik to 1030, co pozwala z kolei obliczyć, że przechowywanie
+			oszczędności przez rok na lokacie to dla naszego portfela zysk rzędu 30 złotych. Wyposażeni w tę wiedzę mogą Państwo przejść do finalizacji umowy…lub też poszukać korzystniejszej oferty.
+			<br /><br />
+			<h2>Odejmij procent od liczby</h2>
+			<br />
+			<b>Aby odjąć procent od liczby,</b> należy wykonać następujące działanie. <br /><br /><img
+				src="kalkulator-procentowy-wzor5.png"
+				alt="Odejmij procent od liczby (a-{[b/100]*a}) - Kalkulator procentowy Obliczanie procentów Kalkulator %"
+			/><br /><br />
+			W przypadku powyższego wzoru sytuacja jest wysoce zbliżona do scenariusza opisanego w punkcie powyższym, tutaj jednakże zamiast dodawać określoną wartość procentową…odejmujemy ją.<br /><br />
+			Z rzeczonej funkcji naszego kalkulatora skorzystać mogą wszystkie osoby korzystające zarówno z pożyczek bankowych jak i tak zwanych „chwilówek”. Załóżmy, że zdecydowali się Państwo
+			pożyczyć 2500 złotych na miesiąc celem pokrycia najistotniejszych bieżących wydatków. Niemniej jednak, przedstawiciel firmy pożyczkowej poinformował Państwa, iż pożyczana kwota musi zostać
+			pomniejszona o 15 % z uwagi na wcześniejsze nieuregulowane zobowiązania finansowe.<br /><br />
+			I tak:<br /><br />
+			W pierwszym polu naszego kalkulatora wpisać należy sumę jaką mieliśmy początkowo otrzymać (2500 złotych), natści osób odwiedzających naszą witrynę. W planach mamy dalsze rozszerzanie
+			funkcjonalności naszego kalkulatora. Na chwilę obecną przy jego pomocy mogą Państwo: obliczyć procent z danej liczby, określić jakim procentem jednej liczby jest druga liczba, oszacować
+			wzrost procentowy określonej wartości, jak też odjąć lub dodać określony procent do sumy początkowej. Mamy nadzieję, że korzystanie z przygotowanego specjalnie dla Państwa narzędzia
+			matematycznego będzie możliwie jak najbardziej intuicyjne oraz przyjemne. W przypadku jakichkolwiek pytań czy wątpliwości – zachęcamy do kontaktu z administracją portalu.
+			<br /><br />
+			<h2>Dzięki :)</h2>
+			<br />
+			DDziękujemy za odwiedziny na stronie kalkulatorprocentowy.pl ! To tu znajdą Państwo zbiór najpotrzebniejszych wzorów potrzebnych do przeprowadzenia istotnych obliczeń wraz z objaśnieniami
+			dotyczącymi ich zastosowania w praktyce. Specjalnie dla Państwa przygotowaliśmy formuły, z których najczęściej korzystają klienci banków, firm pożyczkowych, inwestorzy…oraz osoby
+			potrzebujące niewielkiego wsparcia przy szacowaniu funduszy jakimi dysponuje gospodarstwo domowe. Zapewne wiele razy słyszeli Państwo pytanie: „Do czego może się w życiu przydać
+			matematyka?”. Ze swojej strony zapewniamy, że w swojej podstawowej postaci, jest to jedna z najistotniejszych dziedzin nauki, która towarzyszy nam niemalże na każdym kroku. Weźmy
+			najprostszy z przykładów – pragniemy kupić naszemu dziecku na urodziny nowoczesny telefon. Z ulotek reklamowych dowiedzieliśmy się, że jego cena początkowa wynosiła 2000 złotych, jednakże
+			z uwagi na organizowaną wyprzedaż, cena spadła o 35 %. Jak więc obliczyć ile zapłacimy za zakup dokonany podczas trwania promocji? Najłatwiej sprawdzić to przy pomocy naszego kalkulatora
+			procentowego! Dzięki niemu matematyka stanie się nie tylko łatwa ale i przyjemna.<br /><br />
+			W swojej obecnej formie dostępny na naszej stronie kalkulator obsługuje następujące równania: <strong>obliczanie procentów</strong> z danej liczby, szacowanie jakim procentem jednej liczby
+			jest druga liczba, obliczanie wzrostu procentowego danej wartości oraz dodawanie i odejmowanie określonego procentu od wartości początkowej. Rzeczone obliczenia posłużyć mogą do określenia
+			nowej ceny przecenionych towarów, jak też ułatwić określenie zalet oraz wad konta bankowego lub lokaty jaką mamy zamiar założyć. Opracowany przez naszą administrację program zapewne pomoże
+			także oszacować, czy podejmowana inwestycja lub też pożyczka, którą pragniemy wziąć od firmy pożyczkowej są w danym momencie rozwiązaniami najkorzystniejszymi oraz ile możemy na nich
+			zyskać lub też stracić. W planach mamy dalsze poszerzanie funkcjonalności naszego kalkulatora procentowego. Jeżeli jednak którakolwiek z dostępnych obecnie opcji stwarza Państwu
+			jakiekolwiek trudności – prosimy o kontakt z naszą administrację celem rozwiązania problemu i ewentualnego wprowadzenia ulepszeń i modyfikacji do omawianego narzędzia.<br /><br />
+		</article>
+		<script src="scripttestv1.js"></script>
+		<script src="https://gzermplatz.aftermarket.pl/script.php" defer="defer"></script>
+	</body>
+</html>
